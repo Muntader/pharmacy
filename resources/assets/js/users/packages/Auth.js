@@ -1,0 +1,97 @@
+export default function (Vue) {
+
+    Vue.auth = {
+
+        
+        //Set token
+        setToken(accessToken, expiration, username, image, permission) {
+            localStorage.setItem('_user',
+                JSON.stringify({
+                    'token': accessToken,
+                    'expiration': expiration,
+                    'username': username,
+                    'image': image,
+                    'permission': permission
+                }))
+        },
+
+
+        //Destroy token
+        destroyToken(accessToken, expiration) {
+            localStorage.removeItem('_user');
+            location.reload();
+        },
+
+
+        //Get token and check it 
+        getToken() {
+            let data = JSON.parse(localStorage.getItem('_user'))
+
+            if (data !== null) {
+                if (!data.token || !data.expiration) {
+                    return null
+                }
+                if (Date.now() < data.expiration) {
+                    this.destroyToken();
+                    return null
+                } else {
+                    return data.token
+                }
+            }
+        },
+
+
+        //Get token and check it 
+        getUserInfo(request) {
+            if (this.getToken()) {
+            const data = JSON.parse(localStorage.getItem('_user'))
+            if (request === 'permission') {
+                return data.permission;
+            } else if (request === 'username') {
+                return data.username;
+            } else if (request === 'image') {
+                return data.image;
+            } else if (request === 'prefix') {
+
+                let check = data.permission;
+                let prefix = 'u';
+
+                if (check == 1 || check == 2 || check == 3) {
+                    return prefix = 's';
+                } else {
+                    return prefix = 'u';
+                }
+
+            }
+        }
+        },
+
+
+        // Check if there token
+        isAuthenticated() {
+            if (this.getToken()) {
+                return true
+            } else {
+                return false
+            }
+
+        },
+
+
+        // Set image and username
+        setDetails(username, image) {
+            localStorage.setItem('username', username)
+            localStorage.setItem('image', image)
+        },
+
+
+    }
+
+    Object.defineProperties(Vue.prototype, {
+        $auth: {
+            get: () => {
+                return Vue.auth
+            }
+        }
+    })
+}

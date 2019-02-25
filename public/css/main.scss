@@ -1,0 +1,401 @@
+/* 
+ *   Colors
+ *************/
+
+$body-bg: #fdfdfd;
+$dark: #4c4c4c;
+$light: #fff;
+$font-color: #444;
+$borde-color: #007bff;
+body {
+    background: $body-bg;
+    color: $font-color;
+    font-family: 'Ubuntu', sans-serif;
+    overflow-x: hidden;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+    color: #636b6f;
+}
+
+.home .back {
+    position: fixed;
+    z-index: 1000;
+    left: 10px;
+    top: 0;
+    color: $light;
+    cursor: pointer;
+}
+
+.home .background {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.home .background::before {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background: rgba(52, 218, 247, 0.9);
+    background: -moz-linear-gradient(left, rgba(52, 218, 247, 0.9) 0%, rgba(75, 103, 214, 0.9) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(52, 218, 247, 0.9)), color-stop(100%, rgba(75, 103, 214, 0.9)));
+    background: -webkit-linear-gradient(left, rgba(52, 218, 247, 0.9) 0%, rgba(75, 103, 214, 0.9) 100%);
+    background: -o-linear-gradient(left, rgba(52, 218, 247, 0.9) 0%, rgba(75, 103, 214, 0.9) 100%);
+    background: -ms-linear-gradient(left, rgba(52, 218, 247, 0.9) 0%, rgba(75, 103, 214, 0.9) 100%);
+    background: linear-gradient(to right, rgba(52, 218, 247, 0.9) 0%, rgba(75, 103, 214, 0.9) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#34daf7', endColorstr='#4b67d6', GradientType=1);
+}
+
+.home .background .title {
+    position: absolute;
+    top: 20%;
+    z-index: 1;
+    color: $light;
+    text-align: center;
+    width: 100%;
+}
+
+.home .background .image-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin: auto;
+    border: 2px solid #151515;
+}
+
+
+/* Auth Style */
+
+.home .login .login-form {
+    position: relative;
+    background-color: $light;
+    -webkit-box-shadow: 1px 1px 5px 0px rgba(66, 66, 66, 1);
+    -moz-box-shadow: 1px 1px 5px 0px rgba(66, 66, 66, 1);
+    box-shadow: 1px 1px 5px 0px rgba(66, 66, 66, 1);
+}
+
+.home .login .login-form .image-circel {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin: auto;
+    box-shadow: 1px 1px 1px #9e9e9e;
+    -moz-box-shadow: 1px 1px 1px #9e9e9e;
+    -webkit-box-shadow: 1px 1px 1px #9e9e9e;
+}
+
+.home .login .login-form .image-circel img {
+    position: relative;
+}
+
+
+/* Enter and leave animations can use different */
+
+
+/* durations and timing functions.              */
+
+.slide-fade-enter-active {
+    transition: all .3s ease-in-out;
+}
+
+.slide-fade-leave-active {
+    transition: all .0s ease-out;
+}
+
+.slide-fade-enter,
+.slide-fade-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */
+
+{
+    transform: translateX(10px);
+    opacity: 0;
+}
+
+.home .plan .plan-card {
+    background: $light;
+    -webkit-box-shadow: 5px 1px 1px -2px rgba(143, 143, 143, 0.45);
+    -moz-box-shadow: 5px 1px 1px -2px rgba(143, 143, 143, 0.45);
+    box-shadow: 5px 1px 1px -2px rgba(143, 143, 143, 0.45);
+    border-bottom: 4px solid $font-color;
+    height: 500px;
+    cursor: pointer;
+}
+
+.home .plan .plan-card:hover {
+    background: $light;
+    -webkit-box-shadow: 5px 1px 1px -2px rgba(143, 143, 143, 0.45);
+    -moz-box-shadow: 5px 1px 1px -2px rgba(143, 143, 143, 0.45);
+    box-shadow: 5px 1px 1px -2px rgba(143, 143, 143, 0.45);
+    border-bottom: 4px solid $borde-color;
+    height: 500px;
+    cursor: pointer;
+}
+
+.home .plan .plan-card .price .title {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.home .plan .plan-card .price .amount {
+    font-size: 2.5rem;
+    color: #FF9800;
+    font-weight: bolder;
+}
+
+.home .plan .plan-card .description li {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.home .signup .signup-form,
+.home .payment .payment-form {
+    background: $light;
+    -webkit-box-shadow: 1px 1px 5px 0px rgba(66, 66, 66, 1);
+    -moz-box-shadow: 1px 1px 5px 0px rgba(66, 66, 66, 1);
+    box-shadow: 1px 1px 5px 0px rgba(66, 66, 66, 1);
+}
+
+
+/*
+ *         Panel
+ **************************/
+
+$sidebar-color: #f5f5f5;
+$blue: #03A9F4;
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity .5s
+}
+
+.fade-enter,
+.fade-leave-to
+/* .fade-leave-active below version 2.1.8 */
+
+{
+    opacity: 0
+}
+
+.panel .sidebar {
+    position: fixed;
+    height: 100%;
+    background: $sidebar-color;
+    box-shadow: 1px -1px 3px 0px #c5c5c5;
+}
+
+.panel .sidebar .image-circle {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: auto;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #9e9e9e;
+    -moz-box-shadow: 1px 1px 1px #9e9e9e;
+    -webkit-box-shadow: 1px 1px 1px #9e9e9e;
+}
+
+.panel .sidebar .image-circle img {
+    width: auto;
+    height: 100%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+}
+
+.panel .sidebar ul li {
+    padding: 10px;
+    margin: 1px;
+}
+
+.panel .sidebar ul li .router-link-exact-active {
+    padding: 10px;
+    margin: 1px;
+    border-left: 2px solid $blue;
+}
+
+
+/* Table */
+
+.panel .search input {
+    background-color: $body-bg;
+}
+
+.panel .table .custom-alert-warning i,
+.panel .table .custom-alert-danger i {
+    font-size: 22px !important;
+}
+
+.panel .paginate ul li {
+    cursor: pointer;
+}
+
+.panel .image-input input {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.panel .image-input label {
+    width: 100%;
+    background-color: #f8f8f8;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #c1c1c1;
+}
+
+.panel .medicinal-info {
+    background-color: #fff;
+    padding: 15px;
+}
+
+.panel .medicinal-info .left {
+    border-right: 2px solid #e6e6e6;
+}
+
+.panel .medicinal-info .list-group-item {
+    border: none !important;
+}
+
+.panel .dropdown-item.active,
+.panel .dropdown-item:active {
+    color: #fff !important;
+}
+
+
+/* POS */
+
+.panel .pos .invoice {
+    border-left: 2px solid #e6e6e6;
+}
+
+.panel .pos .card {
+    height: 350px;
+    bottom: 10px;
+}
+
+.panel .pos .card .card-text {
+    overflow: auto;
+    height: 150px;
+}
+
+
+/* Sales */
+
+@media (min-width: 576px) {
+    .panel .sales .modal-dialog,
+    .panel .customer-order .modal-dialog,
+    {
+        max-width: 700px;
+        margin: 30px auto;
+    }
+}
+
+// Settings
+.panel .settings .profile-image label {
+    position: absolute;
+    background-color: rgba(26, 179, 241, 0.78);
+    text-align: center;
+    bottom: auto;
+    width: 100%;
+    padding: 0;
+    left: 0;
+    color: #fff;
+    height: 100%;
+    cursor: pointer;
+}
+
+.panel .settings .profile-image i {
+    width: 100%;
+    position: absolute;
+    top: 44%;
+    right: 0;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.panel .settings .image-circle {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: auto;
+    box-shadow: 1px 1px 1px #9e9e9e;
+    -moz-box-shadow: 1px 1px 1px #9e9e9e;
+    -webkit-box-shadow: 1px 1px 1px #9e9e9e;
+}
+
+.panel .settings .image-circle img {
+    width: auto;
+    height: 100%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+}
+
+.panel .settings .nav .router-link-exact-active {
+    border-bottom: 2px solid #03A9F4;
+}
+
+.panel .settings .language span.custom-control-indicator {
+    top: 3px;
+}
+
+.panel .settings .language label {
+    position: relative;
+    top: 6px;
+}
+
+.panel .settings .language img {
+    position: relative;
+    top: 3px;
+}
+
+.panel .settings .language .list-group-item {
+    border-bottom: 1px solid #dcdbdb !important;
+    background: transparent;
+    border: none;
+}
+
+
+/* Spinner */
+
+.panel .spinner,
+.panel .modal-content .spinner {
+    position: fixed;
+    top: 0px;
+    background: $body-bg;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.panel .v-spinner {
+    position: absolute;
+    left: 38%;
+    top: 30%;
+}
+
+.panel .modal-content .v-spinner {
+    position: absolute;
+    left: 46%;
+    top: 30%;
+}

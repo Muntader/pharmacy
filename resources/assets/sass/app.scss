@@ -1,0 +1,15 @@
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Ubuntu");
+
+// Variables
+@import "variables";
+
+// Bootstrap
+
+@import "~bootstrap/scss/bootstrap";
+
+// Font awesome
+@import "../../../node_modules/font-awesome/scss/font-awesome";
+
+// Main
+@import "../../../public/css/main.scss";
